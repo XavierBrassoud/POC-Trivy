@@ -16,13 +16,13 @@ jobs:
 
     steps:
 
-    ################################################################
-    ### STEP 1 : Run vulnerability scanner on container : python ###
-    ################################################################
-    - name: Run Trivy vulnerability scanner on python Image
+    ##############################################################################
+    ### STEP 1 : Run vulnerability scanner on container : vulnerables/web-dvwa ###
+    ##############################################################################
+    - name: Run Trivy vulnerability scanner on vulnerables/web-dvwa Image
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: python
+        image-ref: vulnerables/web-dvwa
         format: 'template'
         template: '@/contrib/sarif.tpl'
         output: 'trivy-results-docker.sarif'
