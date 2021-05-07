@@ -26,7 +26,6 @@ jobs:
         format: 'template'
         template: '@/contrib/sarif.tpl'
         output: 'trivy-results-docker.sarif'
-        severity: 'CRITICAL,HIGH'
     
     ###########################################################
     ### STEP 2 : Upload Trivy vulnerability to Security Tab ###
