@@ -22,7 +22,7 @@ jobs:
     - name: Run Trivy vulnerability scanner on vulnerables/web-dvwa Image
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: postgres
+        image-ref: postgres:alpine
         format: 'template'
         template: '@/contrib/sarif.tpl'
         output: 'trivy-results-docker.sarif'
