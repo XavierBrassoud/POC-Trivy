@@ -37,7 +37,7 @@ jobs:
     ### STEP 2 : Upload Trivy vulnerability to Security Tab ###
     ###########################################################
     - name: Upload Trivy vulnerability to GitHub Security Tab
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       if: always()
       with:
         # Path to SARIF file relative to the root of the repository
